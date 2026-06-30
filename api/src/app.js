@@ -10,7 +10,8 @@ app.use(cors());           // Permite que React se conecte
 app.use(morgan('dev'));    // Muestra: GET /products 200 en consola
 app.use(express.json());   // Entiende los objetos JSON que enviamos
 
-app.use('/api', routes);
+//app.use('/api', routes);
+app.use('/', routes); // uso router globalmente
 
 export default app;
 
