@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../api/axios";
 
-export default function TalleresList({ onSelect }) {
+export default function TalleresLista({ onSelect }) {
   const [talleres, setTalleres] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -21,7 +21,6 @@ export default function TalleresList({ onSelect }) {
         <div
           key={t.id}
           onClick={() => onSelect(t.id)}
-          style={{ cursor: "pointer" }}
         >
           {t.nombre} - ${t.costo}
         </div>

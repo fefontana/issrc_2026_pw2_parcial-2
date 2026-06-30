@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import LibrosList from "./components/LibrosList";
+import LibrosLista from "./components/LibrosLista";
 import LibroDetalle from "./components/LibroDetalle";
 
-import TalleresList from "./components/TalleresList";
+import TalleresLista from "./components/TalleresLista";
 import TallerDetalle from "./components/TallerDetalle";
 
 export default function App() {
@@ -11,15 +11,15 @@ export default function App() {
   const [tallerId, setTallerId] = useState(null);
 
   return (
-    <div style={{ display: "flex", gap: "40px" }}>
-      
-      <div>
-        <LibrosList onSelect={setLibroId} />
+    <div className="container">
+
+      <div className="panel">
+        <LibrosLista onSelect={setLibroId} />
         <LibroDetalle id={libroId} />
       </div>
 
-      <div>
-        <TalleresList onSelect={setTallerId} />
+      <div className="panel">
+        <TalleresLista onSelect={setTallerId} />
         <TallerDetalle id={tallerId} />
       </div>
 
